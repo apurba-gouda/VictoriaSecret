@@ -15,7 +15,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewModelProviders.of(this, logInViewModelFactory)[LogInViewModel::class.java]
+        logInViewModelFactory = LoginViewModelFactory()
+        loginViewModel = ViewModelProviders.of(this, logInViewModelFactory)[LogInViewModel::class.java]
     }
 
 }
