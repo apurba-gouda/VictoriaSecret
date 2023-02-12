@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">Victoria\'s Secret</string>
+    <string name="app_name"><b>Victoria\'s Secret</b></string>
     <string name="email_or_username">Email or Username</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="products_fragment">Product fragment</string>
+    <string name="profile_fragment">Profile fragment</string>
+    <string name="products">Products</string>
+    <string name="profile">Profile</string>
 </resources>
