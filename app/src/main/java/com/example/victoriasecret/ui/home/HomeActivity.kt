@@ -2,16 +2,13 @@ package com.example.victoriasecret.ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.example.victoriasecret.ProductsFragment
 import com.example.victoriasecret.R
 import com.example.victoriasecret.databinding.ActivityHomeBinding
-import com.google.android.material.navigation.NavigationBarView
 
 class HomeActivity : AppCompatActivity() , NavController.OnDestinationChangedListener {
 
