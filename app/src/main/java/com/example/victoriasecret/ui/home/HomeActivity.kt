@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.example.victoriasecret.R
+import com.example.victoriasecret.databinding.ActivityHomeBinding
 import io.ktor.client.features.*
 import io.ktor.client.request.*
 
