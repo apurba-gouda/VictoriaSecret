@@ -26,8 +26,8 @@ class ProductsFragment : Fragment() {
   ): View? {
 
     productFragmentBinding = FragmentProductsBinding.inflate(layoutInflater)
-
     vm = ProductsVMBuilder.build(this)
+
     vm.fetchProducts()
     setUpRecyclerView()
     setUpObservers()

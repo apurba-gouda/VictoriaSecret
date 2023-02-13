@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.victoriasecret.ui.home.profile.data.ProfileService
+import com.example.victoriasecret.ui.home.profile.data.http.ProfileService
 import com.example.victoriasecret.ui.home.profile.data.models.Profile
 import kotlinx.coroutines.launch
 

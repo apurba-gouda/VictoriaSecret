@@ -8,5 +8,13 @@
     <string name="profile_fragment">Profile fragment</string>
     <string name="products">Products</string>
     <string name="profile">Profile</string>
-    <string name="price">%s ₹</string>
+    <string name="price">₹ %s</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="complete_address">Complete Address</string>
+    <string name="balance_val">2000</string>
+    <string name="points_val">1400</string>
+    <string name="points_earned">Points Earned</string>
+    <string name="john_wick">John Wick</string>
+    <string name="dob">10/11/1900</string>
+    <string name="jw">JW</string>
 </resources>

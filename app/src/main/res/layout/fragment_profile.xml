@@ -1,69 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@color/black"
-  tools:context="com.example.victoriasecret.ui.home.profile.view.ProfileFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_black"
+    tools:context="com.example.victoriasecret.ui.home.profile.view.ProfileFragment">
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/profileIV"
-    android:layout_width="150dp"
-    android:layout_height="150dp"
-    android:layout_marginTop="72dp"
-    android:background="@drawable/bd_profile"
-    android:gravity="center"
-    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
-    android:textColor="@color/black"
-    android:textStyle="bold"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:text="JW" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/userName"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="24dp"
-    android:layout_marginTop="16dp"
-    android:gravity="center_horizontal"
-    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-    android:textColor="@color/white"
-    app:layout_constraintEnd_toStartOf="@+id/firstName"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/profileIV"
-    tools:text="wjohn" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/profileTV"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/bd_profile"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/jw" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/firstName"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:gravity="center_horizontal"
-    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-    android:textColor="@color/white"
-    app:layout_constraintEnd_toStartOf="@+id/lastName"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toEndOf="@+id/userName"
-    app:layout_constraintTop_toBottomOf="@+id/profileIV"
-    tools:text="John" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dob"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/firstName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/firstName"
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        tools:text="@string/dob" />
 
-  <androidx.appcompat.widget.AppCompatTextView
-    android:id="@+id/lastName"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:layout_marginEnd="24dp"
-    android:gravity="center_horizontal"
-    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-    android:textColor="@color/white"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toEndOf="@+id/firstName"
-    app:layout_constraintTop_toBottomOf="@+id/profileIV"
-    tools:text="Wick" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTV"
+        app:layout_constraintStart_toEndOf="@+id/profileTV"
+        app:layout_constraintTop_toTopOf="@+id/profileTV"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/john_wick" />
+
+    <TextView
+        android:id="@+id/pointsEarnedLabelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="34dp"
+        android:textColor="@color/text_grey"
+        android:text="@string/points_earned"
+        app:layout_constraintEnd_toStartOf="@+id/pointsEarnedValueTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTV"
+        tools:text="@string/points_earned" />
+
+    <TextView
+        android:id="@+id/pointsEarnedValueTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/text_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTV"
+        tools:text="@string/points_val" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTV" />
+
+    <TextView
+        android:id="@+id/walletBalanceLabelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/wallet_balance"
+        android:textColor="@color/text_grey"
+        app:layout_constraintEnd_toStartOf="@+id/walletBalanceValueTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider"
+        tools:text="@string/wallet_balance" />
+
+    <TextView
+        android:id="@+id/walletBalanceValueTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/text_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider"
+        tools:text="@string/balance_val" />
+
+
+    <TextView
+        android:id="@+id/addressTV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="92dp"
+        android:background="@color/black"
+        android:padding="20dp"
+        android:textColor="@color/text_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walletBalanceValueTV"
+        tools:text="@string/complete_address" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.victoriasecret.ui.home.profile.data
+package com.example.victoriasecret.ui.home.profile.data.http
 
 import com.example.victoriasecret.ui.home.profile.data.models.Profile
 

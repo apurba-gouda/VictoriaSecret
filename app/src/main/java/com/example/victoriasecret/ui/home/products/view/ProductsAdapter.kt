@@ -50,13 +50,13 @@ class ProductsAdapter(
         price.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
         price.text = getPrice(itemView.context,product.price)
         productIV.loadImage(product.productUrl)
+
       }
     }
 
     private fun getPrice(context: Context, price:String) :String{
       return context.resources.getString(R.string.price,price)
     }
-
 
   }
 
