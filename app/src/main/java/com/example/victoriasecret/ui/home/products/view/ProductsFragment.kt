@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.victoriasecret.R
 import com.example.victoriasecret.databinding.FragmentProductsBinding
 import com.example.victoriasecret.ui.home.products.ProductsVMBuilder
@@ -13,7 +16,7 @@ import com.example.victoriasecret.ui.home.products.ProductsVMBuilder
 class ProductsFragment : Fragment() {
   private lateinit var productFragmentBinding: FragmentProductsBinding
   private lateinit var vm: ProductsViewModel
-  private val adapter: ProductsAdapter by lazy {
+  private val productsAdapter: ProductsAdapter by lazy {
     ProductsAdapter(emptyList())
   }
 
@@ -26,23 +29,24 @@ class ProductsFragment : Fragment() {
 
     vm = ProductsVMBuilder.build(this)
     vm.fetchProducts()
-    setUpObservers()
     setUpRecyclerView()
+    setUpObservers()
+
     return productFragmentBinding.root
   }
 
   private fun setUpRecyclerView() {
     productFragmentBinding.productList.apply {
       layoutManager =
-        LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-      adapter = adapter
+        GridLayoutManager(requireContext(), 2, RecyclerView.VERTICAL, false)
+      adapter = productsAdapter
     }
   }
 
   private fun setUpObservers() {
     vm.productsStream.observe(viewLifecycleOwner) {
       if (it.isNullOrEmpty()) return@observe
-      adapter.updateProducts(it)
+      productsAdapter.updateProducts(it)
     }
   }
 

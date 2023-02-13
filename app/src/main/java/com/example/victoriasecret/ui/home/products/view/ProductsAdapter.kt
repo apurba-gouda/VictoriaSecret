@@ -1,6 +1,7 @@
 package com.example.victoriasecret.ui.home.products.view
 
 import android.content.Context
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +18,6 @@ class ProductsAdapter(
     productList = list
     notifyDataSetChanged()
   }
-
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductVH {
     val viewBinding = ItemProductBinding.inflate(LayoutInflater.from(parent.context))
@@ -45,17 +45,19 @@ class ProductsAdapter(
     fun bindData(product: Product) {
       binding.apply {
         productName.text = product.name
-        productDesc.text = product.productDesc
+        brandName.text = product.brand
         offerPrice.text = getPrice(itemView.context,product.offerPrice)
+        price.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
         price.text = getPrice(itemView.context,product.price)
         productIV.loadImage(product.productUrl)
-
       }
     }
 
     private fun getPrice(context: Context, price:String) :String{
       return context.resources.getString(R.string.price,price)
     }
+
+
   }
 
 }
