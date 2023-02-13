@@ -1,7 +1,7 @@
 package com.example.victoriasecret.ui.home
 
 import android.os.Bundle
-import android.widget.Toast
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -9,8 +9,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.victoriasecret.R
 import com.example.victoriasecret.databinding.ActivityHomeBinding
-import io.ktor.client.features.*
-import io.ktor.client.request.*
 
 class HomeActivity : AppCompatActivity(),
   NavController.OnDestinationChangedListener {
@@ -34,12 +32,14 @@ class HomeActivity : AppCompatActivity(),
     arguments: Bundle?
   ) {
     if (destination.id == R.id.productsFragment) {
-      Toast.makeText(this, "product clicked", Toast.LENGTH_SHORT).show()
+      binding.homeNavigation.visibility = View.VISIBLE
     }
+
     if (destination.id == R.id.profileFragment) {
-      Toast.makeText(this, "profile clicked", Toast.LENGTH_SHORT).show()
+
     }
-
+    if (destination.id == R.id.productDetailsFragment) {
+      binding.homeNavigation.visibility = View.GONE
+    }
   }
-
 }

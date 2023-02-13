@@ -1,8 +1,11 @@
 package com.example.victoriasecret.ui.home.products.data.models
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+@Parcelize
 @Serializable
 data class Product(
   @SerialName("id")
@@ -19,4 +22,5 @@ data class Product(
   val offerPrice: String,
   @SerialName("productUrl")
   val productUrl: String,
-)
+): Parcelable
+

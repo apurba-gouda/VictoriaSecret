@@ -9,10 +9,11 @@
         android:id="@+id/productsFragment"
         android:name="com.example.victoriasecret.ui.home.products.view.ProductsFragment"
         android:label="products"
-        tools:layout="@layout/fragment_products" >
+        tools:layout="@layout/fragment_products">
         <action
             android:id="@+id/action_productsFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+
     </fragment>
 
     <fragment
@@ -23,9 +24,16 @@
 
     <fragment
         android:id="@+id/productDetailsFragment"
-        android:name="com.example.victoriasecret.ProductDetailsFragment"
+        android:name="com.example.victoriasecret.ui.home.products.view.ProductDetailsFragment"
         android:label="product_details"
-        tools:layout="@layout/fragment_product_details" >
+        tools:layout="@layout/fragment_product_details">
+
+        <argument
+            android:name="ProductDetail"
+            app:argType="com.example.victoriasecret.ui.home.products.data.models.Product" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_productsFragment"
+            app:destination="@id/productsFragment" />
 
     </fragment>
 

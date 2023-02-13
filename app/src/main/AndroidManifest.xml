@@ -14,7 +14,7 @@
     android:theme="@style/Theme.VictoriaSecret"
     tools:targetApi="31">
     <activity
-      android:name=".ui.LoginActivity"
+      android:name=".ui.home.login.LoginActivity"
       android:exported="false" />
     <activity
       android:name=".ui.home.HomeActivity"

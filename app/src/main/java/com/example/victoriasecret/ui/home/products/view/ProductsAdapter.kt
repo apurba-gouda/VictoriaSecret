@@ -9,10 +9,15 @@ import com.example.victoriasecret.R
 import com.example.victoriasecret.databinding.ItemProductBinding
 import com.example.victoriasecret.extension.loadImage
 import com.example.victoriasecret.ui.home.products.data.models.Product
+import kotlinx.coroutines.channels.BroadcastChannel
+import kotlinx.coroutines.flow.asFlow
 
 class ProductsAdapter(
   private var productList: List<Product>,
 ) : RecyclerView.Adapter<ProductsAdapter.ProductVH>() {
+
+  private val itemChannel = BroadcastChannel<Product>(1)
+  val itemClickFlow = itemChannel.asFlow()
 
   fun updateProducts(list: List<Product>) {
     productList = list
@@ -30,16 +35,14 @@ class ProductsAdapter(
 
   override fun getItemCount(): Int = productList.size
 
-
   inner class ProductVH(private val binding: ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
 
     init {
       binding.root.setOnClickListener {
         if (adapterPosition == RecyclerView.NO_POSITION) return@setOnClickListener
         //Register Listener here
-//        itemChannel.trySend(feeds[adapterPosition].id)
+        itemChannel.trySend(productList[adapterPosition])
       }
-
     }
 
     fun bindData(product: Product) {
@@ -50,14 +53,12 @@ class ProductsAdapter(
         price.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
         price.text = getPrice(itemView.context,product.price)
         productIV.loadImage(product.productUrl)
-
       }
     }
 
     private fun getPrice(context: Context, price:String) :String{
       return context.resources.getString(R.string.price,price)
     }
-
   }
 
 }
