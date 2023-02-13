@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.victoriasecret.ProfileFragment"
+        android:name="com.example.victoriasecret.ui.home.profile.view.ProfileFragment"
         android:label="profile"
         tools:layout="@layout/fragment_profile" />
 

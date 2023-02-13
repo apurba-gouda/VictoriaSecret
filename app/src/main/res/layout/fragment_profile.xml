@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.victoriasecret.ProfileFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/black"
+  tools:context="com.example.victoriasecret.ui.home.profile.view.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/profile_fragment" />
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/profileIV"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="72dp"
+    android:background="@drawable/bd_profile"
+    android:gravity="center"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="JW" />
 
-</FrameLayout>
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/userName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="16dp"
+    android:gravity="center_horizontal"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toStartOf="@+id/firstName"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/profileIV"
+    tools:text="wjohn" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/firstName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:gravity="center_horizontal"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toStartOf="@+id/lastName"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/userName"
+    app:layout_constraintTop_toBottomOf="@+id/profileIV"
+    tools:text="John" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/lastName"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="24dp"
+    android:gravity="center_horizontal"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    android:textColor="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/firstName"
+    app:layout_constraintTop_toBottomOf="@+id/profileIV"
+    tools:text="Wick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

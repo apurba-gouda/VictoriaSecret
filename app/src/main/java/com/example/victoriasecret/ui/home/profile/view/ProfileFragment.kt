@@ -1,4 +1,4 @@
-package com.example.victoriasecret
+package com.example.victoriasecret.ui.home.profile.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
