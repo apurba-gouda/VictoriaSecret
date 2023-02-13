@@ -9,9 +9,7 @@ class HttpProductsService : ProductsService {
 
   override suspend fun getProducts(): ProductsResponse {
     return NetworkClient.getClient().get {
-      url {
-        path(NetworkClient.GET_PRODUCTS)
-      }
+      url (NetworkClient.GET_PRODUCTS)
     }
   }
 }
