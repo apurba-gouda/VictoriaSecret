@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.example.victoriasecret.databinding.ActivityLoginBinding
+import com.example.victoriasecret.ui.LoginViewModelFactory
 
 class LoginActivity : AppCompatActivity() {
 
