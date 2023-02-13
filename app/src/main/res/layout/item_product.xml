@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/productCard"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_margin="8dp"
+  android:padding="8dp"
+  android:orientation="vertical"
+  app:cardBackgroundColor="@color/white">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/productIV"
+      android:layout_width="200dp"
+      android:layout_height="200dp" />
+
+    <RelativeLayout
+      android:layout_width="150dp"
+      android:layout_height="wrap_content"
+      android:padding="4dp">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:textSize="14sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Name" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/brandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productName"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:textAllCaps="false"
+        tools:text="magnetic 100 wireless charger - white" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/offerPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brandName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="4dp"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="Rs. 999" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brandName"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/offerPrice"
+        android:padding="4dp"
+        android:textSize="12sp"
+        tools:text="Rs. 2999" />
+
+    </RelativeLayout>
+
+  </LinearLayout>
+

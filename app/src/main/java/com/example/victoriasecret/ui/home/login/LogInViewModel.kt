@@ -1,4 +1,4 @@
-package com.example.victoriasecret.ui
+package com.example.victoriasecret.ui.home.login
 
 import androidx.lifecycle.ViewModel
 
