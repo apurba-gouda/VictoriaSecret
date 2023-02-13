@@ -8,4 +8,5 @@
     <string name="profile_fragment">Profile fragment</string>
     <string name="products">Products</string>
     <string name="profile">Profile</string>
+    <string name="price">%s ₹</string>
 </resources>
