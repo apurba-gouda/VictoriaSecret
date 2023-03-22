@@ -29,7 +29,7 @@ class HomeActivity : AppCompatActivity(),
 
   override fun onResume() {
     super.onResume()
-    println("This is branch 1.0.1")
+    println("This is branch 1.0.2")
   }
 
   override fun onDestinationChanged(
