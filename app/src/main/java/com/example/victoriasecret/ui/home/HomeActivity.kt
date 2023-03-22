@@ -26,6 +26,10 @@ class HomeActivity : AppCompatActivity(),
     navController.addOnDestinationChangedListener(this)
   }
 
+  override fun onStart() {
+    super.onStart()
+  }
+
   override fun onDestinationChanged(
     controller: NavController,
     destination: NavDestination,
