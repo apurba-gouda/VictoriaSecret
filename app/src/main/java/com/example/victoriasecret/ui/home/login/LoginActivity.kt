@@ -20,4 +20,9 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel = ViewModelProviders.of(this, logInViewModelFactory)[LogInViewModel::class.java]
     }
 
+    override fun onResume() {
+        super.onResume()
+        println("onResume")
+    }
+
 }
