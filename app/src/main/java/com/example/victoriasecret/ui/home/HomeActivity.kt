@@ -14,6 +14,7 @@ class HomeActivity : AppCompatActivity(),
   NavController.OnDestinationChangedListener {
 
   private lateinit var binding: ActivityHomeBinding
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     binding = ActivityHomeBinding.inflate(layoutInflater)
@@ -26,6 +27,10 @@ class HomeActivity : AppCompatActivity(),
     navController.addOnDestinationChangedListener(this)
   }
 
+  override fun onResume() {
+    super.onResume()
+  }
+
   override fun onDestinationChanged(
     controller: NavController,
     destination: NavDestination,
@@ -35,9 +40,6 @@ class HomeActivity : AppCompatActivity(),
       binding.homeNavigation.visibility = View.VISIBLE
     }
 
-    if (destination.id == R.id.profileFragment) {
-
-    }
     if (destination.id == R.id.productDetailsFragment) {
       binding.homeNavigation.visibility = View.GONE
     }
